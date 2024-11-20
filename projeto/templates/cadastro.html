@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Cálculo de Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cadastro e Cálculo de Produto</h1>
+
+    <!-- Formulário de Cadastro -->
+    <form method="POST" action="/cadastro">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+        <label for="produto">Produto a ser comprado</label>
+        <input type="text" id="produto" name="produto" placeholder="Digite o nome do produto" required>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    {% if resultado %}
+    <div class="resultado">
+        <p>{{ resultado }}</p>
+    </div>
+    {% endif %}
+
+    <footer>
+        <p>&copy; 2024 Vanessa da Silveira. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

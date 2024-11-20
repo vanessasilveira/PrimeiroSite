@@ -1,0 +1,127 @@
+/* Estilo global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff5f6d, #ffc3a0);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Título */
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Formulário */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #f8f9fa;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Inputs */
+input {
+    width: calc(100% - 20px);
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #f1f1f1;
+    color: #333;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    background: #fff;
+}
+
+/* Botões */
+button {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 100%;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #e70056;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Resultado */
+.resultado {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #f8f9fa;
+    text-align: center;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    form, .resultado {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 1rem;
+    }
+}

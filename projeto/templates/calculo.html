@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha a Forma de Pagamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Escolha a Forma de Pagamento</h1>
+
+    <!-- Formulário de Cálculo -->
+    <form method="POST" action="/calculo">
+        <label for="valorProduto">Valor do Produto (R$)</label>
+        <input type="number" id="valorProduto" name="valorProduto" placeholder="Digite o valor do produto" required>
+
+        <label for="formaPagamento">Forma de Pagamento</label>
+        <select id="formaPagamento" name="formaPagamento" required>
+            <option value="1">Dinheiro ou PIX (10% de desconto)</option>
+            <option value="2">Cartão à vista (5% de desconto)</option>
+            <option value="3">Cartão 2x (Preço normal)</option>
+            <option value="4">Cartão 3x ou mais (10% de acréscimo)</option>
+        </select>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+    <div class="resultado">
+        <p>{{ resultado }}</p>
+    </div>
+    {% endif %}
+
+    <footer>
+        <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
